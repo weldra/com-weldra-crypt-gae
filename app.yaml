@@ -1,0 +1,192 @@
+application: weldra-crypt
+version: 0-1-0
+runtime: python27
+threadsafe: true
+api_version: 1
+
+default_expiration: "30d"
+
+handlers:
+- url: /(.*\.(appcache))
+  mime_type: text/cache-manifest
+  static_files: public/\1
+  upload: pubic/(.*\.(appcache))
+  expiration: "0m"
+
+- url: /(.*\.atom)
+  mime_type: application/atom+xml
+  static_files: pubic/\1
+  upload: pubic/(.*\.atom)
+  expiration: "1h"
+
+- url: /(.*\.crx)
+  mime_type: application/x-chrome-extension
+  static_files: pubic/\1
+  upload: pubic/(.*\.crx)
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: pubic/\1
+  upload: pubic/(.*\.css)
+
+- url: /(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: pubic/\1
+  upload: pubic/(.*\.eot)
+
+- url: /(.*\.htc)
+  mime_type: text/x-component
+  static_files: pubic/\1
+  upload: pubic/(.*\.htc)
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: pubic/\1
+  upload: pubic/(.*\.html)
+  expiration: "1h"
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: pubic/\1
+  upload: pubic/(.*\.ico)
+  expiration: "7d"
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: pubic/\1
+  upload: pubic/(.*\.js)
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: pubic/\1
+  upload: pubic/(.*\.json)
+  expiration: "1h"
+
+- url: /(.*\.m4v)
+  mime_type: video/m4v
+  static_files: pubic/\1
+  upload: pubic/(.*\.m4v)
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: pubic/\1
+  upload: pubic/(.*\.mp4)
+
+- url: /(.*\.(ogg|oga))
+  mime_type: audio/ogg
+  static_files: pubic/\1
+  upload: pubic/(.*\.(ogg|oga))
+
+- url: /(.*\.ogv)
+  mime_type: video/ogg
+  static_files: pubic/\1
+  upload: pubic/(.*\.ogv)
+
+- url: /(.*\.otf)
+  mime_type: font/opentype
+  static_files: pubic/\1
+  upload: pubic/(.*\.otf)
+
+- url: /(.*\.rss)
+  mime_type: application/rss+xml
+  static_files: pubic/\1
+  upload: pubic/(.*\.rss)
+  expiration: "1h"
+
+- url: /(.*\.safariextz)
+  mime_type: application/octet-stream
+  static_files: pubic/\1
+  upload: pubic/(.*\.safariextz)
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: pubic/\1
+  upload: pubic/(.*\.(svg|svgz))
+
+- url: /(.*\.swf)
+  mime_type: application/x-shockwave-flash
+  static_files: pubic/\1
+  upload: pubic/(.*\.swf)
+
+- url: /(.*\.ttf)
+  mime_type: font/truetype
+  static_files: pubic/\1
+  upload: pubic/(.*\.ttf)
+
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: pubic/\1
+  upload: pubic/(.*\.txt)
+
+- url: /(.*\.unity3d)
+  mime_type: application/vnd.unity
+  static_files: pubic/\1
+  upload: pubic/(.*\.unity3d)
+
+- url: /(.*\.webapp)
+  mime_type: application/x-web-app-manifest+json
+  static_files: pubic/\1
+  upload: pubic/(.*\.webapp)
+
+- url: /(.*\.webm)
+  mime_type: video/webm
+  static_files: pubic/\1
+  upload: pubic/(.*\.webm)
+
+- url: /(.*\.webp)
+  mime_type: image/webp
+  static_files: pubic/\1
+  upload: pubic/(.*\.webp)
+
+- url: /(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: pubic/\1
+  upload: pubic/(.*\.woff)
+
+- url: /(.*\.xml)
+  mime_type: application/xml
+  static_files: pubic/\1
+  upload: pubic/(.*\.xml)
+  expiration: "1h"
+
+- url: /(.*\.xpi)
+  mime_type: application/x-xpinstall
+  static_files: pubic/\1
+  upload: pubic/(.*\.xpi)
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: pubic/\1
+  upload: pubic/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+# audio files
+- url: /(.*\.(mid|midi|mp3|wav))
+  static_files: pubic/\1
+  upload: pubic/(.*\.(mid|midi|mp3|wav))
+
+# windows files
+- url: /(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: pubic/\1
+  upload: pubic/(.*\.(doc|exe|ppt|rtf|xls))
+
+# compressed files
+- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: pubic/\1
+  upload: pubic/(.*\.(bz2|gz|rar|tar|tgz|zip))
+
+# index files
+- url: /(.+)/
+  static_files: pubic/\1/index.html
+  upload: pubic/(.+)/index.html
+  expiration: "15m"
+
+- url: /(.+)
+  static_files: pubic/\1/index.html
+  upload: pubic/(.+)/index.html
+  expiration: "15m"
+
+# site root
+- url: /
+  static_files: pubic/index.html
+  upload: pubic/index.html
+  expiration: "15m"
