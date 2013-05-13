@@ -1,0 +1,77 @@
+{
+  "name": "Weldra Crypt",
+  "description": "Encrypt and decrypt files",
+  "developer": {
+    "name": "Weldra",
+    "url": "http://weldra.com"
+  },
+  "version": "0.0.1",
+  "type": "web",
+  "appcache_path": "/app.appcache",
+  "csp": "default-src 'none'; script-src 'self'; style-src 'self'",
+  "launch_path": "/",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "default_locale": "en",
+  "locales": {
+    "en": {
+      "description": "Encrypt and decrypt files",
+      "launch_path": "/"
+    },
+    "de": {
+      "description": "Encrypt and decrypt files",
+      "launch_path": "/de/"
+    },
+    "es": {
+      "description": "Encrypt and decrypt files",
+      "launch_path": "/es/"
+    },
+    "fr": {
+      "description": "Encrypt and decrypt files",
+      "launch_path": "/fr/"
+    },
+    "nl": {
+      "description": "Encrypt and decrypt files",
+      "launch_path": "/nl/"
+    }
+  },
+
+  "activities": {
+
+    "pick": {
+      "href": "./#pick",
+      "disposition": "inline",
+      "filters": {
+        "type": ["application/aes"]
+      },
+      "returnValue": true
+    },
+
+    "open": {
+      "href": "./#open",
+      "disposition": "window"
+    },
+    "share": {
+      "href": "./#open",
+      "disposition": "window"
+    },
+    "view": {
+      "href": "./#view",
+      "disposition": "window",
+      "filters": {
+        "type": ["application/aes"]
+      }
+    },
+
+    "update": {
+      "href": "./#update",
+      "disposition": "window",
+      "filters": {
+        "type": ["application/aes"]
+      }
+    }
+  }
+}
