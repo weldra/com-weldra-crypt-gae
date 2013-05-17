@@ -8,7 +8,7 @@
   "version": "0.0.1",
   "type": "web",
   "appcache_path": "/app.appcache",
-  "csp": "default-src 'none'; script-src 'self'; style-src 'self'",
+  "csp": "default-src *; script-src 'self'; object-src 'none'; style-src 'self'",
   "launch_path": "/",
   "icons": {
     "16": "icon-16.png",
