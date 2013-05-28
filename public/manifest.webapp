@@ -19,22 +19,6 @@
     "en": {
       "description": "Encrypt and decrypt files",
       "launch_path": "/"
-    },
-    "de": {
-      "description": "Encrypt and decrypt files",
-      "launch_path": "/de/"
-    },
-    "es": {
-      "description": "Encrypt and decrypt files",
-      "launch_path": "/es/"
-    },
-    "fr": {
-      "description": "Encrypt and decrypt files",
-      "launch_path": "/fr/"
-    },
-    "nl": {
-      "description": "Encrypt and decrypt files",
-      "launch_path": "/nl/"
     }
   },
 
