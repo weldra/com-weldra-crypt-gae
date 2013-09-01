@@ -1,8 +1,0 @@
-{
-  "name": "Weldra Crypt",
-  "description": "Encrypt and decrypt files",
-  "launch_url": "/",
-  "icons": {
-    "128": "icon.png"
-  }
-}
